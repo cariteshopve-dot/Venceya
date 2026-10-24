@@ -16,7 +16,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.ArrowBack
-import androidx.compose.material.icons.outlined.CalendarMonth
+import androidx.compose.material.icons.outlined.DateRange
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.Button
 import androidx.compose.material3.DatePicker
@@ -120,7 +120,7 @@ fun ItemScreen(
 
             Label(stringResource(R.string.item_due))
             OutlinedButton(onClick = { pickingDate = true }) {
-                Icon(Icons.Outlined.CalendarMonth, null)
+                Icon(Icons.Outlined.DateRange, null)
                 Text(
                     f.due.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG)),
                     modifier = Modifier.padding(start = 8.dp),
