@@ -11,6 +11,12 @@
 
     <string name="home_empty_title">Nada por vencer</string>
     <string name="home_empty_body">Agrega tus suscripciones, pagos fijos, documentos y garantías. Te avisamos antes de que venzan.</string>
+    <string name="summary_week">esta semana</string>
+    <string name="summary_month">este mes</string>
+    <string name="summary_later">más adelante</string>
+    <string name="short_days">%dd</string>
+    <string name="short_months">%dm</string>
+    <string name="short_years">%da</string>
     <string name="due_today">Hoy</string>
     <string name="due_tomorrow">Mañana</string>
     <plurals name="days_left">

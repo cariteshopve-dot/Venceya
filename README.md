@@ -12,3 +12,7 @@ Cada cambio en `main` compila un APK nuevo y lo deja en
 ## Código
 
 Kotlin + Jetpack Compose, Room para los datos y WorkManager para la revisión diaria de avisos (9:00). La lógica de fechas está en `domain/` con pruebas en `app/src/test`.
+
+## Estilo
+
+"Semáforo": fondo blanco (o modo oscuro), tipografía Lexend y anillos de cuenta regresiva en verde, ámbar y rojo según lo cerca que esté la fecha.

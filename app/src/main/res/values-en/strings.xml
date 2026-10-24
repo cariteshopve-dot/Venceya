@@ -9,6 +9,12 @@
 
     <string name="home_empty_title">Nothing coming up</string>
     <string name="home_empty_body">Add your subscriptions, bills, documents and warranties. We\'ll remind you before they\'re due.</string>
+    <string name="summary_week">this week</string>
+    <string name="summary_month">this month</string>
+    <string name="summary_later">later</string>
+    <string name="short_days">%dd</string>
+    <string name="short_months">%dmo</string>
+    <string name="short_years">%dy</string>
     <string name="due_today">Today</string>
     <string name="due_tomorrow">Tomorrow</string>
     <plurals name="days_left">
