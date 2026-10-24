@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_add">Add</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_back">Back</string>
+    <string name="action_ok">Done</string>
+    <string name="action_cancel">Cancel</string>
+
+    <string name="home_empty_title">Nothing coming up</string>
+    <string name="home_empty_body">Add your subscriptions, bills, documents and warranties. We\'ll remind you before they\'re due.</string>
+    <string name="due_today">Today</string>
+    <string name="due_tomorrow">Tomorrow</string>
+    <plurals name="days_left">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="days_overdue">
+        <item quantity="one">%d day overdue</item>
+        <item quantity="other">%d days overdue</item>
+    </plurals>
+
+    <string name="kind_subscription">Subscription</string>
+    <string name="kind_bill">Bill</string>
+    <string name="kind_document">Document</string>
+    <string name="kind_warranty">Warranty</string>
+    <string name="kind_insurance">Insurance</string>
+
+    <string name="repeat_none">Doesn\'t repeat</string>
+    <string name="repeat_weekly">Weekly</string>
+    <string name="repeat_monthly">Monthly</string>
+    <string name="repeat_yearly">Yearly</string>
+
+    <string name="item_new">New due date</string>
+    <string name="item_edit">Edit</string>
+    <string name="item_name">Name</string>
+    <string name="item_name_hint">Netflix, rent, passport…</string>
+    <string name="item_kind">Type</string>
+    <string name="item_due">Due on</string>
+    <string name="item_repeat">Repeats</string>
+    <string name="item_remind">Remind me</string>
+    <string name="remind_same_day">Same day only</string>
+    <plurals name="remind_days">
+        <item quantity="one">%d day before</item>
+        <item quantity="other">%d days before</item>
+    </plurals>
+    <string name="item_amount">Amount (optional)</string>
+    <string name="item_amount_hint">7.99 USD</string>
+    <string name="item_note">Note (optional)</string>
+    <string name="item_limit">The free version keeps up to %d items. The one-time purchase removes the limit.</string>
+
+    <string name="notif_channel">Due date reminders</string>
+    <string name="notif_today">%s is due today</string>
+    <plurals name="notif_before">
+        <item quantity="one">%1$s is due tomorrow</item>
+        <item quantity="other">%1$s is due in %2$d days</item>
+    </plurals>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_theme">Appearance</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="settings_about">About</string>
+    <string name="about_version">VenceYa %s</string>
+    <string name="about_credit">Made by lacosta.agency</string>
+</resources>

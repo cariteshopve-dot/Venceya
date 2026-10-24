@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VenceYa</string>
+
+    <string name="action_add">Agregar</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_delete">Borrar</string>
+    <string name="action_back">Volver</string>
+    <string name="action_ok">Listo</string>
+    <string name="action_cancel">Cancelar</string>
+
+    <string name="home_empty_title">Nada por vencer</string>
+    <string name="home_empty_body">Agrega tus suscripciones, pagos fijos, documentos y garantías. Te avisamos antes de que venzan.</string>
+    <string name="due_today">Hoy</string>
+    <string name="due_tomorrow">Mañana</string>
+    <plurals name="days_left">
+        <item quantity="one">%d día</item>
+        <item quantity="other">%d días</item>
+    </plurals>
+    <plurals name="days_overdue">
+        <item quantity="one">Venció hace %d día</item>
+        <item quantity="other">Venció hace %d días</item>
+    </plurals>
+
+    <string name="kind_subscription">Suscripción</string>
+    <string name="kind_bill">Pago fijo</string>
+    <string name="kind_document">Documento</string>
+    <string name="kind_warranty">Garantía</string>
+    <string name="kind_insurance">Seguro</string>
+
+    <string name="repeat_none">No se repite</string>
+    <string name="repeat_weekly">Cada semana</string>
+    <string name="repeat_monthly">Cada mes</string>
+    <string name="repeat_yearly">Cada año</string>
+
+    <string name="item_new">Nuevo vencimiento</string>
+    <string name="item_edit">Editar</string>
+    <string name="item_name">Nombre</string>
+    <string name="item_name_hint">Netflix, alquiler, pasaporte…</string>
+    <string name="item_kind">Tipo</string>
+    <string name="item_due">Vence el</string>
+    <string name="item_repeat">Se repite</string>
+    <string name="item_remind">Avisarme</string>
+    <string name="remind_same_day">Solo el mismo día</string>
+    <plurals name="remind_days">
+        <item quantity="one">%d día antes</item>
+        <item quantity="other">%d días antes</item>
+    </plurals>
+    <string name="item_amount">Monto (opcional)</string>
+    <string name="item_amount_hint">7,99 USD</string>
+    <string name="item_note">Nota (opcional)</string>
+    <string name="item_limit">La versión gratis guarda hasta %d vencimientos. Con el pago único no hay límite.</string>
+
+    <string name="notif_channel">Avisos de vencimientos</string>
+    <string name="notif_today">%s vence hoy</string>
+    <plurals name="notif_before">
+        <item quantity="one">%1$s vence mañana</item>
+        <item quantity="other">%1$s vence en %2$d días</item>
+    </plurals>
+
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_theme">Apariencia</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+    <string name="settings_about">Acerca de</string>
+    <string name="about_version">VenceYa %s</string>
+    <string name="about_credit">Hecho por lacosta.agency</string>
+</resources>
