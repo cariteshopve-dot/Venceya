@@ -15,7 +15,8 @@ data class ItemEntity(
     /** Fecha como días desde 1970, sin hora: un vencimiento es un día, no un instante. */
     val firstDueEpochDay: Long,
     val repeat: String,
-    val remindDaysBefore: Int,
+    /** Días antes de avisar, separados por coma: "1,0". */
+    val remindDays: String,
     val amount: String,
     val note: String,
     val createdAt: Long,
@@ -27,7 +28,7 @@ fun ItemEntity.toDomain() = Item(
     kind = Kind.fromKey(kind),
     firstDue = LocalDate.ofEpochDay(firstDueEpochDay),
     repeat = Repeat.fromKey(repeat),
-    remindDaysBefore = remindDaysBefore,
+    remindDays = remindDays.split(",").mapNotNull { it.trim().toIntOrNull() }.toSet(),
     amount = amount,
     note = note,
 )
@@ -38,7 +39,7 @@ fun Item.toEntity(createdAt: Long = System.currentTimeMillis()) = ItemEntity(
     kind = kind.key,
     firstDueEpochDay = firstDue.toEpochDay(),
     repeat = repeat.key,
-    remindDaysBefore = remindDaysBefore,
+    remindDays = remindDays.sortedDescending().joinToString(","),
     amount = amount,
     note = note,
     createdAt = createdAt,

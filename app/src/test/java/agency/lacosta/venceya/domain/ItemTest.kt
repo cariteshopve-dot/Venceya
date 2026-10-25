@@ -10,8 +10,8 @@ import org.junit.Test
 class ItemTest {
     private val today = LocalDate.of(2026, 10, 24)
 
-    private fun item(due: LocalDate, repeat: Repeat = Repeat.NONE, before: Int = 3) =
-        Item(name = "x", kind = Kind.BILL, firstDue = due, repeat = repeat, remindDaysBefore = before)
+    private fun item(due: LocalDate, repeat: Repeat = Repeat.NONE, remind: Set<Int> = setOf(3, 0)) =
+        Item(name = "x", kind = Kind.BILL, firstDue = due, repeat = repeat, remindDays = remind)
 
     @Test fun oneTimeInFuture() {
         val i = item(LocalDate.of(2026, 12, 5))
@@ -52,7 +52,24 @@ class ItemTest {
         assertEquals(Reminder.BEFORE, item(LocalDate.of(2026, 10, 27)).reminderToday(today))
         assertEquals(Reminder.TODAY, item(today).reminderToday(today))
         assertNull(item(LocalDate.of(2026, 10, 26)).reminderToday(today))
-        assertEquals(Reminder.TODAY, item(today, before = 0).reminderToday(today))
+    }
+
+    @Test fun severalRemindersAtOnce() {
+        val due = LocalDate.of(2026, 10, 31)
+        val i = item(due, remind = setOf(7, 1, 0))
+        assertEquals(Reminder.BEFORE, i.reminderToday(due.minusDays(7)))
+        assertEquals(Reminder.BEFORE, i.reminderToday(due.minusDays(1)))
+        assertEquals(Reminder.TODAY, i.reminderToday(due))
+        assertNull(i.reminderToday(due.minusDays(3)))
+    }
+
+    @Test fun noSameDayIfNotChosen() {
+        assertNull(item(today, remind = setOf(1)).reminderToday(today))
+        assertNull(item(today, remind = emptySet()).reminderToday(today))
+    }
+
+    @Test fun noRemindersOnceOverdue() {
+        assertNull(item(today.minusDays(1), remind = setOf(0, 1)).reminderToday(today))
     }
 
     @Test fun sortsByNextDue() {
