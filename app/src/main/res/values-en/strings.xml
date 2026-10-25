@@ -67,6 +67,15 @@
     <string name="theme_system">System</string>
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>
+    <string name="settings_alerts">Reminders</string>
+    <string name="sound_tone">Reminder sound</string>
+    <string name="sound_default">Phone\'s default sound</string>
+    <string name="sound_silent">No sound</string>
+    <string name="sound_listen">Listen</string>
+    <string name="sound_test">Test reminder</string>
+    <string name="sound_hint">Tap \"Reminder sound\" to see the list: each sound plays when you tap it. \"Test reminder\" sends you a notification just like the real ones.</string>
+    <string name="sound_test_title">VenceYa</string>
+    <string name="sound_test_body">This is how we\'ll remind you when something is due.</string>
     <string name="settings_about">About</string>
     <string name="about_version">VenceYa %s</string>
     <string name="about_credit">Made by lacosta.agency</string>

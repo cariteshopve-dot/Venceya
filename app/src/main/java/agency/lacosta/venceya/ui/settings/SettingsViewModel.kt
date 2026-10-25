@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
+import agency.lacosta.venceya.data.settings.AlertSound
 import agency.lacosta.venceya.data.settings.Settings
 import agency.lacosta.venceya.data.settings.SettingsRepository
 import agency.lacosta.venceya.data.settings.ThemeMode
@@ -19,6 +20,10 @@ class SettingsViewModel(private val repo: SettingsRepository) : ViewModel() {
 
     fun setThemeMode(mode: ThemeMode) {
         viewModelScope.launch { repo.setThemeMode(mode) }
+    }
+
+    fun setSound(sound: AlertSound) {
+        viewModelScope.launch { repo.setSound(sound) }
     }
 
     companion object {

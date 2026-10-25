@@ -74,6 +74,10 @@ fun SettingsScreen(
             }
 
             HorizontalDivider(Modifier.padding(top = 24.dp), color = MaterialTheme.colorScheme.outlineVariant)
+            SectionTitle(stringResource(R.string.settings_alerts))
+            SoundSection(s.sound, viewModel::setSound)
+
+            HorizontalDivider(Modifier.padding(top = 24.dp), color = MaterialTheme.colorScheme.outlineVariant)
             SectionTitle(stringResource(R.string.settings_about))
             val context = LocalContext.current
             val version = context.packageManager.getPackageInfo(context.packageName, 0).versionName
