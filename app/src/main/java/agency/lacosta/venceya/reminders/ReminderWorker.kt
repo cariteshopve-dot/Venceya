@@ -30,9 +30,10 @@ class ReminderWorker(context: Context, params: WorkerParameters) : CoroutineWork
             val reminder = item.reminderToday(today) ?: return@forEach
             val text = when (reminder) {
                 Reminder.TODAY -> applicationContext.getString(R.string.notif_today, item.name)
-                Reminder.BEFORE -> applicationContext.resources.getQuantityString(
-                    R.plurals.notif_before, item.remindDaysBefore, item.name, item.remindDaysBefore,
-                )
+                Reminder.BEFORE -> {
+                    val left = item.daysLeft(today).toInt()
+                    applicationContext.resources.getQuantityString(R.plurals.notif_before, left, item.name, left)
+                }
             }
             Notifier.show(applicationContext, sound, item.id.toInt(), item.name, text)
         }

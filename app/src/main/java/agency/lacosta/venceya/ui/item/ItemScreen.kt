@@ -138,8 +138,8 @@ fun ItemScreen(
             FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 ItemViewModel.REMIND_OPTIONS.forEach { d ->
                     FilterChip(
-                        selected = f.remindDaysBefore == d,
-                        onClick = { viewModel.setRemind(d) },
+                        selected = d in f.remindDays,
+                        onClick = { viewModel.toggleRemind(d) },
                         label = {
                             Text(if (d == 0) stringResource(R.string.remind_same_day) else pluralStringResource(R.plurals.remind_days, d, d))
                         },

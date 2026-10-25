@@ -27,7 +27,7 @@ data class ItemForm(
     val kind: Kind = Kind.SUBSCRIPTION,
     val due: LocalDate = LocalDate.now(),
     val repeat: Repeat = Kind.SUBSCRIPTION.defaultRepeat,
-    val remindDaysBefore: Int = 3,
+    val remindDays: Set<Int> = setOf(1, 0),
     val amount: String = "",
     val note: String = "",
     val loaded: Boolean = false,
@@ -58,7 +58,7 @@ class ItemViewModel(
                     kind = existing.kind,
                     due = existing.firstDue,
                     repeat = existing.repeat,
-                    remindDaysBefore = existing.remindDaysBefore,
+                    remindDays = existing.remindDays,
                     amount = existing.amount,
                     note = existing.note,
                     loaded = true,
@@ -74,7 +74,8 @@ class ItemViewModel(
     fun setKind(v: Kind) = _form.update { it.copy(kind = v, repeat = if (it.isNew) v.defaultRepeat else it.repeat) }
     fun setDue(v: LocalDate) = _form.update { it.copy(due = v) }
     fun setRepeat(v: Repeat) = _form.update { it.copy(repeat = v) }
-    fun setRemind(v: Int) = _form.update { it.copy(remindDaysBefore = v) }
+    /** Marca o desmarca un aviso; se pueden tener varios a la vez. */
+    fun toggleRemind(v: Int) = _form.update { it.copy(remindDays = if (v in it.remindDays) it.remindDays - v else it.remindDays + v) }
     fun setAmount(v: String) = _form.update { it.copy(amount = v) }
     fun setNote(v: String) = _form.update { it.copy(note = v) }
 
@@ -89,7 +90,7 @@ class ItemViewModel(
                     kind = f.kind,
                     firstDue = f.due,
                     repeat = f.repeat,
-                    remindDaysBefore = f.remindDaysBefore,
+                    remindDays = f.remindDays,
                     amount = f.amount.trim(),
                     note = f.note.trim(),
                 ),

@@ -13,8 +13,8 @@ data class Item(
     val kind: Kind,
     val firstDue: LocalDate,
     val repeat: Repeat = Repeat.NONE,
-    /** Días antes del vencimiento para el primer aviso; 0 = solo el mismo día. */
-    val remindDaysBefore: Int = 3,
+    /** Cuántos días antes avisar; puede ser más de uno. 0 = el mismo día. Vacío = sin avisos. */
+    val remindDays: Set<Int> = setOf(1, 0),
     /** Monto opcional, como texto tal cual lo escribió la persona ("7,99 USD"). */
     val amount: String = "",
     val note: String = "",
@@ -42,9 +42,9 @@ data class Item(
     fun reminderToday(today: LocalDate): Reminder? {
         val left = daysLeft(today)
         return when {
+            left < 0 || left.toInt() !in remindDays -> null
             left == 0L -> Reminder.TODAY
-            remindDaysBefore > 0 && left == remindDaysBefore.toLong() -> Reminder.BEFORE
-            else -> null
+            else -> Reminder.BEFORE
         }
     }
 }

@@ -44,8 +44,8 @@
     <string name="item_kind">Type</string>
     <string name="item_due">Due on</string>
     <string name="item_repeat">Repeats</string>
-    <string name="item_remind">Remind me</string>
-    <string name="remind_same_day">Same day only</string>
+    <string name="item_remind">Remind me (pick as many as you like)</string>
+    <string name="remind_same_day">On the day</string>
     <plurals name="remind_days">
         <item quantity="one">%d day before</item>
         <item quantity="other">%d days before</item>

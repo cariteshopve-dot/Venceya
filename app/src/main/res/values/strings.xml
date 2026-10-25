@@ -46,8 +46,8 @@
     <string name="item_kind">Tipo</string>
     <string name="item_due">Vence el</string>
     <string name="item_repeat">Se repite</string>
-    <string name="item_remind">Avisarme</string>
-    <string name="remind_same_day">Solo el mismo día</string>
+    <string name="item_remind">Avisarme (puedes marcar varios)</string>
+    <string name="remind_same_day">El mismo día</string>
     <plurals name="remind_days">
         <item quantity="one">%d día antes</item>
         <item quantity="other">%d días antes</item>
