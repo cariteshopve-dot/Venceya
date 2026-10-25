@@ -13,7 +13,6 @@ class VenceYaApp : Application() {
     override fun onCreate() {
         super.onCreate()
         container = AppContainer(this)
-        ReminderWorker.createChannel(this)
         ReminderWorker.schedule(this)
     }
 }

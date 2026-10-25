@@ -69,6 +69,15 @@
     <string name="theme_system">Sistema</string>
     <string name="theme_light">Claro</string>
     <string name="theme_dark">Oscuro</string>
+    <string name="settings_alerts">Avisos</string>
+    <string name="sound_tone">Tono del aviso</string>
+    <string name="sound_default">Tono del teléfono</string>
+    <string name="sound_silent">Sin sonido</string>
+    <string name="sound_listen">Escuchar</string>
+    <string name="sound_test">Aviso de prueba</string>
+    <string name="sound_hint">Toca \"Tono del aviso\" para ver la lista: cada tono suena al tocarlo. \"Aviso de prueba\" te manda una notificación como las de verdad.</string>
+    <string name="sound_test_title">VenceYa</string>
+    <string name="sound_test_body">Así te avisaremos cuando algo esté por vencer.</string>
     <string name="settings_about">Acerca de</string>
     <string name="about_version">VenceYa %s</string>
     <string name="about_credit">Hecho por lacosta.agency</string>
